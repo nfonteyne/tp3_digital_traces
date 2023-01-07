@@ -1,2 +1,6 @@
 pytrends
 flask
+pandas
+datetime
+functools
+time
