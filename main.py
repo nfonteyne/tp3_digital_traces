@@ -58,6 +58,6 @@ if __name__ == "__main__":
     with open('t8shakespeare.txt', 'r') as file:
         data = file.read().replace('\n', '')
 
-    #word_count(data)
-    print(count_with_counter_function(data))
+    word_count(data)
+    count_with_counter_function(data)
     app.run()
