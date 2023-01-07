@@ -1,0 +1,34 @@
+:root {
+  --bg: #EDF7F6;
+  --darkblue: #2D3047;
+  --red: #E84855;
+  --orange: #FF9B71;
+}
+
+
+body{
+  background-color: var(--bg);
+  color: var(--darkblue)
+}
+
+body.background{
+  background-image: url("https://gateway.pinata.cloud/ipfs/QmWAFa8LCuXfb4sqw1CoaqWdqFneDudktNGTJngwNY4WEP");
+  background-size: 1400px;
+  height: 2500;
+}
+
+h1{
+  color: var(--red);
+  text-shadow: -1px 0 var(--darkblue), 0 1px var(--darkblue), 1px 0 var(--darkblue), 0 -1px var(--darkblue);
+}
+
+div.card {
+  margin: auto;
+  display:flex;
+  width: 500px;
+  background-color: antiquewhite;
+  justify-content: center;
+  border-radius: 1ch; 
+  border-color:var(--red);
+}
+
