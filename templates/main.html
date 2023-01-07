@@ -1,3 +1,45 @@
 <head>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+<canvas id="chart" width="900" height="400"></canvas>
+<script>
+    new Chart(document.getElementById("chart"), {
+        type: "line",
+        data: {
+            labels: [{% for item in labels %}
+                    "{{item}}",
+                    {% endfor %}],
+            datasets: [
+                {
+                    label: "switch",
+                    data: [{% for item in myswitch %}
+                            "{{item}}",
+                            {% endfor %}],
+                    fill: false,
+                    borderColor: "rgb(75,192,192)",
+                    lineTension: 0.1
+                },
+                {
+                    label: "ps5",
+                    data: [{% for item in myps5 %}
+                            "{{item}}",
+                            {% endfor %}],
+                    fill: false,
+                    borderColor: "rgb(119,181,254)",
+                    lineTension: 0.1
+                }
+            ]
+        },
+        options : {
+            title:{
+                display : true,
+                text: "switch"    
+            },
+            hover: {
+                mode: 'index',
+                intersect: true
+            },
+        }
+    });
+</script>
